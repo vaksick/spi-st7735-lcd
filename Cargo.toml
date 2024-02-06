@@ -1,0 +1,29 @@
+[package]
+name = "spi-st7735-lcd"
+version = "0.1.0"
+authors = ["vaksick <vaksick@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+panic-halt = "0.2"
+st7735-lcd = "0.9"
+embedded-graphics = "0.8"
+# tinybmp = "0.5"
+
+
+[dependencies.stm32f4xx-hal]
+git = "https://github.com/stm32-rs/stm32f4xx-hal"
+features = ["stm32f446", ]
+
+# Set the default for dependencies.
+[profile.dev.package."*"]
+opt-level = "s"
+
+[profile.release]
+codegen-units = 1
+incremental = false
+debug = true
+lto = true
+opt-level = "s"

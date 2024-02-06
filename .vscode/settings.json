@@ -1,0 +1,16 @@
+{
+  "rust-analyzer.check.allTargets": false,
+  "rust-analyzer.check.targets": "thumbv7em-none-eabihf",
+  "actionButtons": {
+    "commands": [
+      {
+        "name": "flash",
+        "singleInstance": true,
+        "color": "#ff0000",
+        "command": "cargo-flash --chip STM32F446RETx",
+        "cwd": "${workspaceFolder}",
+      }
+    ]
+  },
+  "terminal.integrated.defaultProfile.windows": "Command Prompt"
+}
